@@ -1,0 +1,7 @@
+.MuiGrid-spacing-xs-2 > .MuiGrid-item{
+    min-width: 425.5px !important;
+}
+.MuiGrid-spacing-xs-4 > .MuiGrid-item{
+    display: flex;
+    justify-content: center;
+}
