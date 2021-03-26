@@ -10,7 +10,7 @@ import Product from "../../Components/Product/Product";
 import Paginations from "../Home/Components/Pagination/Pagination";
 import Breadcrumb from "./Components/Breadcrumbs/Breadcrumb";
 import Filter from "./Components/FIlter/Filter";
-
+import Header from "../../Components/Navbar/Navbar";
 const Products = (props) => {
   const [data, setData] = useState([]);
   const [dataTmp, setdataTmp] = useState([]);
@@ -88,7 +88,10 @@ const Products = (props) => {
   };
   return (
     <div>
-      <div style={{ height: "80px" }}></div>
+        <div>
+          <Header></Header>
+        </div>
+        <div style={{ height: "150px" }}></div>
       <React.Fragment>
         <CssBaseline />
         <Container maxWidth="xl">

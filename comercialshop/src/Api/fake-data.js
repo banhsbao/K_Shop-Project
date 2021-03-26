@@ -1,7 +1,7 @@
 export const FAKE_PRODUCT_LIST=[{
     "ProductId": 1,
     "ProductName": "Catera",
-    "Quanity": "01",
+    "Quanity": "10",
     "Price": 156.6,
     "Status": true,
     "CreatedDate": "08/17/2020",
@@ -10,7 +10,7 @@ export const FAKE_PRODUCT_LIST=[{
   }, {
     "ProductId": 2,
     "ProductName": "Neon",
-    "Quanity": "2",
+    "Quanity": "10",
     "Price": 366.3,
     "Status": true,
     "CreatedDate": "03/16/2021",
@@ -19,7 +19,7 @@ export const FAKE_PRODUCT_LIST=[{
   }, {
     "ProductId": 3,
     "ProductName": "Express 1500",
-    "Quanity": "247",
+    "Quanity": "10",
     "Price": 475.0,
     "Status": true,
     "CreatedDate": "02/07/2021",
