@@ -1,15 +1,16 @@
-﻿
-using KShop.Models;
+﻿using KShop.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System.Data;
 using System.Data.SqlClient;
+using System.Web.Http.Cors;
 
 namespace KShop.Controllers {
     [Route("api/login")]
     [ApiController]
+    [EnableCors("*", "*", "*")]
     public class LoginController: ControllerBase {
 
         SqlConnection connection = null;
@@ -22,7 +23,7 @@ namespace KShop.Controllers {
 
         // POST api/<LoginController>
         [HttpPost]
-        public string GetAccountForLogin([FromBody] string[] value) {
+        public ActionResult GetAccountForLogin([FromBody] string[] value) {
             bool resultLogin = false ;
             //string username = value[0];
             //string password = value[1];
@@ -47,13 +48,12 @@ namespace KShop.Controllers {
             
             connection.Close();
             if(resultLogin) {
-                
                 Account user = GetAccount(username);
                 string currentUser = JsonConvert.SerializeObject(user);
                 HttpContext.Session.SetString("user", currentUser);
-                return currentUser;
+                return Ok(currentUser);
             }
-            return "";
+            return BadRequest("Not Found");
         }
 
         Account GetAccount(string username) {
@@ -73,7 +73,7 @@ namespace KShop.Controllers {
                 int age = reader.GetInt32("Age");
                 string gender = reader.GetString("gender");
                 string role = reader.GetString("RoleName");
-                result = new Account(fullname, address, age, gender, role);
+                result = new Account(username, fullname, address, age, gender, role);
             }
             connection.Close();
             return result;

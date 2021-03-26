@@ -136,8 +136,8 @@ namespace KShop.Controllers
             return Ok(JsonConvert.SerializeObject(addSuccess.ToString()));
         }
 
-        [HttpPost("updateProduct")]
-        public string UpdateProduct() {
+        [HttpGet("updateProduct")]
+        public ActionResult UpdateProduct() {
             bool addSuccess = false;
             try {
                 string serialize = HttpContext.Session.GetString("tempForm");
@@ -175,7 +175,7 @@ namespace KShop.Controllers
             } catch(Exception) {
                 throw;
             }
-            return JsonConvert.SerializeObject(addSuccess.ToString());
+            return Ok(JsonConvert.SerializeObject(addSuccess.ToString()));
         }
 
         int GetLastProductId() {

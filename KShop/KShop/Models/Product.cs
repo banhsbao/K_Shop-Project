@@ -19,6 +19,12 @@ namespace KShop.Models
         public Product() {
         }
 
+
+        public Product(int productId, int quantity) {
+            this.productId = productId;
+            this.quantity = quantity;
+        }
+
         public Product(string productName, string image, int quantity, float price, int categoryId) {
             this.productName = productName;
             this.image = image;

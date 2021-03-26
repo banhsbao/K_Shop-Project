@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\Project Kshop\\KShop\\KShop\\KShop.csproj": {}
+    "D:\\OneDrive\\Desktop\\Project\\pull\\K_Shop-Project_t\\KShop\\KShop\\KShop.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\Project Kshop\\KShop\\KShop\\KShop.csproj": {
+    "D:\\OneDrive\\Desktop\\Project\\pull\\K_Shop-Project_t\\KShop\\KShop\\KShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Project Kshop\\KShop\\KShop\\KShop.csproj",
+        "projectUniqueName": "D:\\OneDrive\\Desktop\\Project\\pull\\K_Shop-Project_t\\KShop\\KShop\\KShop.csproj",
         "projectName": "KShop",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\Project Kshop\\KShop\\KShop\\KShop.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\Project Kshop\\KShop\\KShop\\obj\\",
+        "projectPath": "D:\\OneDrive\\Desktop\\Project\\pull\\K_Shop-Project_t\\KShop\\KShop\\KShop.csproj",
+        "packagesPath": "C:\\Users\\Win 10\\.nuget\\packages\\",
+        "outputPath": "D:\\OneDrive\\Desktop\\Project\\pull\\K_Shop-Project_t\\KShop\\KShop\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Win 10\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,6 +57,10 @@
               "version": "[2.1.0, )"
             },
             "Microsoft.AspNet.WebApi": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNet.WebApi.Cors": {
               "target": "Package",
               "version": "[5.2.7, )"
             },
@@ -103,7 +107,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

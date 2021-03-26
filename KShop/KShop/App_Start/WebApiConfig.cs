@@ -11,7 +11,8 @@ namespace KShop.App_Start {
             // Web API routes
             config.MapHttpAttributeRoutes();
 
-            
+            config.EnableCors();
+
         }
     }
 }
