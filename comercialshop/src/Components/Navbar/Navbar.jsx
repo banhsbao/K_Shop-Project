@@ -17,7 +17,7 @@ const headersData = [
     },
     {
         label: "My Cart",
-        href: "/account",
+        href: "/cart",
     },
     {
         label: "Log Out",

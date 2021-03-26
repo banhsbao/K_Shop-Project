@@ -14,6 +14,7 @@ import Home from "./Pages/Home/Home";
 import Products from "./Pages/Product/Products";
 import SignInSide from "./Pages/Login/Login";
 import Admin from "./Pages/Admin/Admin";
+import Cart from "./Pages/Cart/Cart";
 function App(props) {
   const useStyles = makeStyles((theme) => ({
     root: {
@@ -78,6 +79,9 @@ function App(props) {
                 </Route>
                 <Route exact path="/admin">
                   <Admin></Admin>
+                </Route>
+                <Route exact path="/cart">
+                  <Cart></Cart>
                 </Route>
               </Switch>
             </Box>

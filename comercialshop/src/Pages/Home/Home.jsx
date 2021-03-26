@@ -31,7 +31,7 @@ const Home = (props) => {
   }, []);
   const style = {
     homeBody: {
-      margin: "0 60px 0 60px",
+      margin: "0 60px 0px 60px",
     },
   };
   const changeData = (value) => {
@@ -47,7 +47,7 @@ const Home = (props) => {
       <div>
         <Header></Header>
       </div>
-      <div style={{ height: "80px" }}></div>
+      <div style={{ height: "150px" }}></div>
       <React.Fragment>
         <CssBaseline />
         <Container maxWidth="xl">
