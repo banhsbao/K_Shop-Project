@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\Project Kshop\\KShop\\KShop\\KShop.csproj": {}
+    "H:\\Private Project\\C#\\K_Shop-Project\\KShop\\KShop\\KShop.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\Project Kshop\\KShop\\KShop\\KShop.csproj": {
+    "H:\\Private Project\\C#\\K_Shop-Project\\KShop\\KShop\\KShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Project Kshop\\KShop\\KShop\\KShop.csproj",
+        "projectUniqueName": "H:\\Private Project\\C#\\K_Shop-Project\\KShop\\KShop\\KShop.csproj",
         "projectName": "KShop",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\Project Kshop\\KShop\\KShop\\KShop.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\Project Kshop\\KShop\\KShop\\obj\\",
+        "projectPath": "H:\\Private Project\\C#\\K_Shop-Project\\KShop\\KShop\\KShop.csproj",
+        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
+        "outputPath": "H:\\Private Project\\C#\\K_Shop-Project\\KShop\\KShop\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -103,7 +103,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,3 +1,4 @@
+import axios from "axios";
 import axiosClient from "../axiosClient";
 import { FAKE_PRODUCT_LIST } from "../fake-data";
 import {FAKE_PRODUCT_SEARCH} from "../fake-dataSearch"
@@ -19,6 +20,10 @@ const  productApi={
                 resolve(FAKE_PRODUCT_SEARCH);
             },250);
         });
+    },
+    manageProduct:()=>{
+        const url='/api/Product/manageproducts';
+        return axiosClient.get(url);
     }
 }
 
