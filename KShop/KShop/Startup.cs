@@ -28,6 +28,10 @@ namespace KShop {
             services.AddSwaggerGen(c => {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "KShop", Version = "v1" });
             });
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder=> builder.AllowAnyOrigin());
+            });
             services.AddMvc();
             services.AddDistributedMemoryCache();           // Đăng ký dịch vụ lưu cache trong bộ nhớ (Session sẽ sử dụng nó)
             services.AddSession();
@@ -45,6 +49,7 @@ namespace KShop {
             app.UseHttpsRedirection();
 
             app.UseSession();
+            app.UseCors();
 
             app.UseRouting();
             app.UseAuthorization();
