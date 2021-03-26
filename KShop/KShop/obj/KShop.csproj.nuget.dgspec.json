@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Private Project\\C#\\K_Shop-Project\\KShop\\KShop\\KShop.csproj": {}
+    "D:\\OneDrive\\Desktop\\Project\\pull\\K_Shop-Project\\KShop\\KShop\\KShop.csproj": {}
   },
   "projects": {
-    "H:\\Private Project\\C#\\K_Shop-Project\\KShop\\KShop\\KShop.csproj": {
+    "D:\\OneDrive\\Desktop\\Project\\pull\\K_Shop-Project\\KShop\\KShop\\KShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Private Project\\C#\\K_Shop-Project\\KShop\\KShop\\KShop.csproj",
+        "projectUniqueName": "D:\\OneDrive\\Desktop\\Project\\pull\\K_Shop-Project\\KShop\\KShop\\KShop.csproj",
         "projectName": "KShop",
-        "projectPath": "H:\\Private Project\\C#\\K_Shop-Project\\KShop\\KShop\\KShop.csproj",
-        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-        "outputPath": "H:\\Private Project\\C#\\K_Shop-Project\\KShop\\KShop\\obj\\",
+        "projectPath": "D:\\OneDrive\\Desktop\\Project\\pull\\K_Shop-Project\\KShop\\KShop\\KShop.csproj",
+        "packagesPath": "C:\\Users\\Win 10\\.nuget\\packages\\",
+        "outputPath": "D:\\OneDrive\\Desktop\\Project\\pull\\K_Shop-Project\\KShop\\KShop\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Win 10\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
