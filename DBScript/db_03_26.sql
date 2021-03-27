@@ -38,6 +38,7 @@ create table Category(
 insert into Category
 values(1, N'quần')
 
+
 create table Product(
 	ProductId int identity(1,1) primary key not null,
 	ProductName nvarchar(50) null,
@@ -48,6 +49,8 @@ create table Product(
 	Image nvarchar(max) null,
 	CategoryId varchar(50) foreign key references Category(CategoryId)
 )
+
+select * from Product
 
 create table Invoice(
 	InvoiceId int identity(1,1) primary key not null,

@@ -20,9 +20,22 @@ const Products = (props) => {
     const fectProductList = async () => {
       try {
         const response = await productApi.getAll();
-        const arrTmp = [...response];
+        let dataRight = [];
+        for (let i = 0; i < response.length; i++) {
+          dataRight.push({
+            ProductId: response[i].productId,
+            ProductName: response[i].productName,
+            Quanity: response[i].quanity,
+            Price: response[i].price,
+            Status: response[i].status,
+            CreatedDate: response[i].createdDate,
+            CategoryId: response[i].categoryId,
+            Image: response[i].image,
+          });
+        }
+        const arrTmp = [...dataRight];
         setdataTmp(arrTmp.splice(0, 12));
-        setData(response);
+        setData(dataRight);
         const datal = Math.ceil(response.length / 12);
         setDataLength(datal);
         let maxTmp = 0;
