@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import productApi from '../../Api/SubApi/productApi';
+import productApi from "../../Api/SubApi/productApi";
+import { Spin } from "antd";
 import {
   Card,
   Container,
@@ -11,14 +12,13 @@ import {
 import { Table, Tag } from "antd";
 import "./Admin.css";
 import Add from "./components/Add/Add";
-import Update from './components/Update/Update';
- 
+import Update from "./components/Update/Update";
+
 const Admin = () => {
   const [stage, setStage] = useState("Manage");
   const [listPro, setListPro] = useState([]);
   const [opened, setOpened] = useState(false);
-
-  const [selectedValue, setSelectedValue] = useState(null);
+  const [changed, setChanged] = useState(false);
   const columns = [
     {
       title: "ProductId",
@@ -34,7 +34,7 @@ const Admin = () => {
       title: "Image",
       dataIndex: "image",
       key: "Image",
-      render: (Image) => <img style={{ width: '50%' }} src={Image} />,
+      render: (Image) => <img style={{ width: "50%" }} src={Image} />,
     },
     {
       title: "Quantity",
@@ -57,9 +57,7 @@ const Admin = () => {
       key: "Status",
       render: (Status) => (
         <span>
-          <Tag
-            color={Status === true ? "green" : "volcano"}
-          >
+          <Tag color={Status === true ? "green" : "volcano"}>
             {Status.toString().toUpperCase()}
           </Tag>
         </span>
@@ -67,7 +65,7 @@ const Admin = () => {
     },
     {
       title: "More",
-      dataIndex: "ProductId",
+      dataIndex: "productId",
       key: "ProductId",
       render: (ProductId) => (
         <>
@@ -75,7 +73,6 @@ const Admin = () => {
             variant="outlined"
             color="secondary"
             onClick={() => handleDelete(ProductId)}
-
           >
             Delete
           </Button>
@@ -84,18 +81,18 @@ const Admin = () => {
     },
   ];
 
-  useEffect(()=>{
-    const fetchData= async ()=>{
-      try{
-        const respone =await productApi.manageProduct();
-        console.log('respone', respone);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const respone = await productApi.manageProduct();
+        console.log("respone", respone);
         setListPro(respone);
-      }catch(error){
-        console.log('Error:',error);
+      } catch (error) {
+        console.log("Error:", error);
       }
-    }
+    };
     fetchData();
-  },[])
+  }, [changed]);
 
   const handleOpenAdd = (value) => {
     console.log("value", value);
@@ -105,26 +102,35 @@ const Admin = () => {
   const handleClose = () => {
     setOpened(false);
   };
-
+  const handleGetAll = () => {
+    setChanged(!changed);
+  };
   const handleDelete = (productId) => {
     // goi api to delete
-  }
-
-  
-
+    console.log("ProductId", productId);
+    const deleteProduct = async () => {
+      const params = {
+        productId: productId,
+      };
+      const respone = await productApi.deleteProduct(params);
+      console.log("respone:!2", respone);
+    };
+    deleteProduct();
+    setChanged(!changed);
+  };
 
   const handleChangeManage = () => {
     setStage("Manage");
   };
 
-  if ( listPro !==  null) {
+  if (listPro !== null) {
     return (
       <Container style={{ padding: "20px" }}>
         <Card>
           <CardContent>
             <Typography variant="h3" component="h3">
               Admin Page
-        </Typography>
+            </Typography>
           </CardContent>
         </Card>
         <div
@@ -150,10 +156,9 @@ const Admin = () => {
           columns={columns}
           dataSource={listPro}
         />
-        <Add opened={opened} onClose={handleClose} />
+        <Add opened={opened}  event={handleGetAll} onClose={handleClose} />
       </Container>
     );
-  } 
-     
+  }
 };
 export default Admin;

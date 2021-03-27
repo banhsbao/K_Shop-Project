@@ -18,13 +18,13 @@ namespace KShop.Controllers {
             this.configuration = config;
             connection = new SqlConnection(config.GetConnectionString("DefaultConnectionStrings"));
         }
-        [HttpPost("delete-product")]
+        [HttpGet("delete-product")]
         public string DeleteProduct(int productId) {
             bool result = false;
             string txtConnection = configuration.GetConnectionString("DefaultConnectionStrings");
             SqlConnection connection = new SqlConnection(txtConnection);
             try {
-                connection.Open();
+                connection.Open()   ;
                 string sql = "UPDATE dbo.Product SET Status = 0 WHERE ProductId = " + productId;
                 SqlCommand command = new SqlCommand(sql, connection);
                 result = command.ExecuteNonQuery() > 0;
