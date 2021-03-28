@@ -6610,19 +6610,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Win 10\\.nuget\\packages\\": {}
+    "C:\\Users\\thant\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\OneDrive\\Desktop\\Project\\pull\\K_Shop-Project\\KShop\\KShop\\KShop.csproj",
+      "projectUniqueName": "D:\\DUY3\\K_Shop-Project\\KShop\\KShop\\KShop.csproj",
       "projectName": "KShop",
-      "projectPath": "D:\\OneDrive\\Desktop\\Project\\pull\\K_Shop-Project\\KShop\\KShop\\KShop.csproj",
-      "packagesPath": "C:\\Users\\Win 10\\.nuget\\packages\\",
-      "outputPath": "D:\\OneDrive\\Desktop\\Project\\pull\\K_Shop-Project\\KShop\\KShop\\obj\\",
+      "projectPath": "D:\\DUY3\\K_Shop-Project\\KShop\\KShop\\KShop.csproj",
+      "packagesPath": "C:\\Users\\thant\\.nuget\\packages\\",
+      "outputPath": "D:\\DUY3\\K_Shop-Project\\KShop\\KShop\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Win 10\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\thant\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6711,7 +6716,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   },
