@@ -16,7 +16,7 @@ const Home = (props) => {
   useEffect(() => {
     const fectProductList = async () => {
       try {
-        const response = await productApi.manageProduct();
+        const response = await productApi.getAll();
         let dataRight = [];
         for (let i = 0; i < response.length; i++) {
           dataRight.push({

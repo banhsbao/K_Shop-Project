@@ -6616,11 +6616,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DUY3\\K_Shop-Project\\KShop\\KShop\\KShop.csproj",
+      "projectUniqueName": "D:\\DUY2\\K_Shop-Project\\KShop\\KShop\\KShop.csproj",
       "projectName": "KShop",
-      "projectPath": "D:\\DUY3\\K_Shop-Project\\KShop\\KShop\\KShop.csproj",
+      "projectPath": "D:\\DUY2\\K_Shop-Project\\KShop\\KShop\\KShop.csproj",
       "packagesPath": "C:\\Users\\thant\\.nuget\\packages\\",
-      "outputPath": "D:\\DUY3\\K_Shop-Project\\KShop\\KShop\\obj\\",
+      "outputPath": "D:\\DUY2\\K_Shop-Project\\KShop\\KShop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

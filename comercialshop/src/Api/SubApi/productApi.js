@@ -14,12 +14,16 @@ const  productApi={
     //         },250);
     //     });
     // },
-    searchProduct:()=>{
-        return new Promise((resolve)=>{
-            setTimeout(()=>{
-                resolve(FAKE_PRODUCT_SEARCH);
-            },250);
-        });
+    // searchProduct:()=>{
+    //     return new Promise((resolve)=>{
+    //         setTimeout(()=>{
+    //             resolve(FAKE_PRODUCT_SEARCH);
+    //         },250);
+    //     });
+    // },
+    searchProduct:(params)=>{
+        const url='/api/Search';
+        return axiosClient.get(url,{params});
     },
     manageProduct:()=>{
         const url='/api/Product/manageproducts';
