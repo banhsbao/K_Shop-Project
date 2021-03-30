@@ -7,7 +7,9 @@ using Microsoft.Extensions.Configuration;
 using System.Data.SqlClient;
 using System.Data;
 using Newtonsoft.Json;
-
+using FireSharp.Response;
+using FireSharp.Config;
+using FireSharp.Interfaces;
 
 namespace KShop.Controllers
 {
@@ -21,6 +23,19 @@ namespace KShop.Controllers
         {
             this.configuration = config;
             connection = new SqlConnection(config.GetConnectionString("DefaultConnectionStrings"));
+        }
+
+        IFirebaseConfig config = new FireSharp.Config.FirebaseConfig {
+            AuthSecret = "1S5oSF1XtjD7CgcI2y4NEa6nDaaglVEryVUJgA9K",
+            BasePath = "https://kshop-e1db4-default-rtdb.firebaseio.com/"
+        };
+
+        IFirebaseClient client;
+
+        private void LoadFirebase() {
+            client = new FireSharp.FirebaseClient(config);
+            if(client != null) {
+            }
         }
 
         [HttpGet("getAllProduct")]
@@ -42,6 +57,7 @@ namespace KShop.Controllers
                         DateTime createdDate = DateTime.Parse(dr["CreatedDate"].ToString() + "");
                         string productName = dr["ProductName"].ToString() + "";
                         string image = dr["Image"].ToString() + "";
+                        image = GetDataFirebase(image);
                         if (listProduct == null)
                         {
                             listProduct = new List<Product>();
@@ -79,6 +95,7 @@ namespace KShop.Controllers
                         DateTime createdDate = DateTime.Parse(dr["CreatedDate"].ToString() + "");
                         string productName = dr["ProductName"].ToString() + "";
                         string image = dr["Image"].ToString() + "";
+                        image = GetDataFirebase(image);
                         bool status = Boolean.Parse(dr["Status"].ToString() + "");
                         if (listProduct == null)
                         {
@@ -200,5 +217,16 @@ namespace KShop.Controllers
             return result;
         }
 
+        private string GetDataFirebase(string image) {
+            LoadFirebase();
+            string base64 = "";
+            try {
+                FirebaseResponse res = client.Get("Image/"+image+"/Img");
+                base64 = res.Body;
+            } catch(Exception) {
+                throw;
+            }
+            return base64;
+        }
     }
 }
