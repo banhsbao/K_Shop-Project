@@ -19,6 +19,7 @@ const Products = (props) => {
   useEffect(() => {
     const fectProductList = async () => {
       try {
+     
         const response = await productApi.getAll();
         let dataRight = [];
         for (let i = 0; i < response.length; i++) {
@@ -40,8 +41,8 @@ const Products = (props) => {
         setDataLength(datal);
         let maxTmp = 0;
         for (let index = 0; index < response.length; index++) {
-          if (maxTmp <= response[index].Price) {
-            maxTmp = response[index].Price;
+          if (maxTmp <= response[index].price) {
+            maxTmp = response[index].price;
           }
         }
         setMax(maxTmp);
@@ -76,28 +77,55 @@ const Products = (props) => {
       setdataTmp(newData.slice(value * 12 - 12, value * 12));
     }
   };
-  const searchData = async (txtSearch, minPrice, maxPrice, cate) => {
-    if (cate === "All") {
-      cate = "";
+  const searchData = async (txtSearch, minPrice, maxPrice, cates) => {
+    if (cates === "All") {
+      cates = "";
+    }
+    if(maxPrice===0){
+      maxPrice=9999;
     }
     //get Api search'
+    const fectProductList = async () => {
     try {
-      const response = await productApi.searchProduct();
-      const arrTmp = [...response];
+      const params={
+        name:txtSearch,
+        max:maxPrice,
+        min:minPrice,
+        cate:cates
+      }
+      const response1 = await productApi.getAll();
+      const response = await productApi.searchProduct(params);
+      let dataRight = [];
+      for (let i = 0; i < response.length; i++) {
+        dataRight.push({
+          ProductId: response[i].productId,
+          ProductName: response[i].productName,
+          Quanity: response[i].quanity,
+          Price: response[i].price,
+          Status: response[i].status,
+          CreatedDate: response[i].createdDate,
+          CategoryId: response[i].categoryId,
+          Image: response[i].image,
+        });
+      }
+      const arrTmp = [...dataRight];
       setdataTmp(arrTmp.splice(0, 12));
-      setData(response);
+      setData(dataRight);
       const datal = Math.ceil(response.length / 12);
       setDataLength(datal);
       let maxTmp = 0;
-      for (let index = 0; index < response.length; index++) {
-        if (maxTmp <= response[index].Price) {
-          maxTmp = response[index].Price;
+      for (let index = 0; index < response1.length; index++) {
+        if (maxTmp <= response1[index].price) {
+          maxTmp = response1[index].price;
         }
       }
       setMax(maxTmp);
     } catch (error) {
       console.log("fail: ", error);
     }
+  };
+
+  fectProductList();
   };
   return (
     <div>

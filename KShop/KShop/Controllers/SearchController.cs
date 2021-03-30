@@ -29,8 +29,8 @@ namespace KShop.Controllers
         /// ex: ["b","1.2","12.3", ""]
         /// <returns>List<Product></returns>
 
-        [HttpPost]
-        public ActionResult<List<Product>> Search([FromBody] string[] search)
+        [HttpGet]
+        public ActionResult<List<Product>> Search(string name, string max, string min, string cate)
         {
             List<Product> listProduct = null;
             string txtConnection = configuration.GetConnectionString("DefaultConnectionStrings");
@@ -39,7 +39,8 @@ namespace KShop.Controllers
             {
                 connection.Open();
                 #region
-                string sql = "SELECT * FROM Product WHERE ProductName LIKE '%" + search[0] + "%' AND " + search[1] + " <= Price AND Price <= " + search[2] + " AND CategoryId LIKE '%" + search[3] + "%'" ;
+                // string sql = "SELECT * FROM Product WHERE ProductName LIKE '%" + search[0] + "%' AND " + search[1] + " <= Price AND Price <= " + search[2] + " AND CategoryId LIKE '%" + search[3] + "%'" ;
+                string sql = "SELECT * FROM Product WHERE ProductName LIKE '%" + name + "%' AND " + min + " <= Price AND Price <= " + max + " AND CategoryId LIKE '%" + cate + "%'";
                 SqlCommand command = new SqlCommand(sql, connection);
 
                 SqlDataReader dr = command.ExecuteReader();

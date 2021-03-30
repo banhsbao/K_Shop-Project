@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6My7ecZso68LGiwUcydYj2wXh+q4xnf3W7NRsjUKUtGMOQ035BLJAPoPzWSsXPSDxD13f3UwPSjJRRkvwnHdeA==",
+  "dgSpecHash": "/nVdYcEYWWpVpK9lh2IkW+xI5aNdOjPP+pmcBYrJI+AzUd+VVu2iNN435Av6DsxxPAXpdzZPXALkoAOw3I5KNw==",
   "success": true,
-  "projectFilePath": "D:\\DUY3\\K_Shop-Project\\KShop\\KShop\\KShop.csproj",
+  "projectFilePath": "D:\\DUY2\\K_Shop-Project\\KShop\\KShop\\KShop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\thant\\.nuget\\packages\\firebase.auth\\1.0.0\\firebase.auth.1.0.0.nupkg.sha512",
     "C:\\Users\\thant\\.nuget\\packages\\firebasestorage.net\\1.0.3\\firebasestorage.net.1.0.3.nupkg.sha512",
